@@ -70,7 +70,7 @@ async function toolNode(state) {
             results.push(
                 {
                     type:'tool',
-                    content:observation,
+                    content:String(observation),
                     tool_call_id:toolCall.id
                 })
             
@@ -106,7 +106,7 @@ const agentBuilder = new StateGraph(MessagesAnnotation)
 const message = [
     {
         role:'user',
-        content:"What is addition of 12 and 34"
+        content:"What is addition of 12 and 34 and then multiply that by 20 then divide that by 10"
     }
 ]  
 
